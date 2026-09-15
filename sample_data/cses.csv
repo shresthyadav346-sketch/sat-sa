@@ -1,0 +1,46 @@
+cse_id,name,sector,criticality,total_assets
+CSE-001,Power Critical Infrastructure Node CSE-001,Power,CRITICAL,80
+CSE-002,Power Critical Infrastructure Node CSE-002,Power,MEDIUM,52
+CSE-003,Telecom Critical Infrastructure Node CSE-003,Telecom,HIGH,75
+CSE-004,Telecom Critical Infrastructure Node CSE-004,Telecom,CRITICAL,94
+CSE-005,Transport Critical Infrastructure Node CSE-005,Transport,MEDIUM,84
+CSE-006,Banking Critical Infrastructure Node CSE-006,Banking,HIGH,66
+CSE-007,State Grid Northern Transmission,Power,CRITICAL,60
+CSE-008,Power Critical Infrastructure Node CSE-008,Power,CRITICAL,103
+CSE-009,Defence Critical Infrastructure Node CSE-009,Defence,MEDIUM,55
+CSE-010,Telecom Critical Infrastructure Node CSE-010,Telecom,HIGH,107
+CSE-011,Transport Critical Infrastructure Node CSE-011,Transport,CRITICAL,62
+CSE-012,Transport Critical Infrastructure Node CSE-012,Transport,HIGH,97
+CSE-013,Telecom Critical Infrastructure Node CSE-013,Telecom,MEDIUM,86
+CSE-014,National Payment Clearing Switch,Banking,CRITICAL,135
+CSE-015,Banking Critical Infrastructure Node CSE-015,Banking,MEDIUM,98
+CSE-016,Banking Critical Infrastructure Node CSE-016,Banking,MEDIUM,48
+CSE-017,Power Critical Infrastructure Node CSE-017,Power,MEDIUM,45
+CSE-018,Telecom Critical Infrastructure Node CSE-018,Telecom,MEDIUM,94
+CSE-019,Power Critical Infrastructure Node CSE-019,Power,HIGH,55
+CSE-020,Transport Critical Infrastructure Node CSE-020,Transport,CRITICAL,64
+CSE-021,Metro Transit Rail Automation,Transport,CRITICAL,76
+CSE-022,Banking Critical Infrastructure Node CSE-022,Banking,MEDIUM,66
+CSE-023,Banking Critical Infrastructure Node CSE-023,Banking,CRITICAL,63
+CSE-024,Telecom Critical Infrastructure Node CSE-024,Telecom,HIGH,105
+CSE-025,Banking Critical Infrastructure Node CSE-025,Banking,MEDIUM,46
+CSE-026,Defence Critical Infrastructure Node CSE-026,Defence,CRITICAL,57
+CSE-027,Telecom Critical Infrastructure Node CSE-027,Telecom,HIGH,76
+CSE-028,Defence Critical Infrastructure Node CSE-028,Defence,MEDIUM,94
+CSE-029,Telecom Critical Infrastructure Node CSE-029,Telecom,MEDIUM,62
+CSE-030,Power Critical Infrastructure Node CSE-030,Power,CRITICAL,67
+CSE-031,Banking Critical Infrastructure Node CSE-031,Banking,CRITICAL,51
+CSE-032,Federal Satellite Telemetry Centre,Telecom,CRITICAL,72
+CSE-033,Banking Critical Infrastructure Node CSE-033,Banking,HIGH,93
+CSE-034,Transport Critical Infrastructure Node CSE-034,Transport,CRITICAL,81
+CSE-035,Power Critical Infrastructure Node CSE-035,Power,CRITICAL,96
+CSE-036,Transport Critical Infrastructure Node CSE-036,Transport,HIGH,64
+CSE-037,Power Critical Infrastructure Node CSE-037,Power,HIGH,48
+CSE-038,Transport Critical Infrastructure Node CSE-038,Transport,MEDIUM,49
+CSE-039,Transport Critical Infrastructure Node CSE-039,Transport,MEDIUM,46
+CSE-040,Transport Critical Infrastructure Node CSE-040,Transport,MEDIUM,80
+CSE-041,Naval Strategic Logistics Depot,Defence,CRITICAL,95
+CSE-042,Banking Critical Infrastructure Node CSE-042,Banking,MEDIUM,108
+CSE-043,Banking Critical Infrastructure Node CSE-043,Banking,HIGH,84
+CSE-044,Transport Critical Infrastructure Node CSE-044,Transport,HIGH,59
+CSE-045,Transport Critical Infrastructure Node CSE-045,Transport,CRITICAL,45
