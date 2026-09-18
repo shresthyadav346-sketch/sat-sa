@@ -34,9 +34,13 @@ COPY data_generator/ ./data_generator/
 # Copy built frontend from stage 1 into frontend/dist
 COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
 
+# Copy entrypoint script and ensure Unix line endings & executable permissions
+COPY deployment/entrypoint.sh ./entrypoint.sh
+RUN sed -i 's/\r$//' ./entrypoint.sh && chmod +x ./entrypoint.sh
+
 # Create storage directory for database
 RUN mkdir -p /app/data
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python -m data_generator.generator && python -m backend.app.services.analysis_runner && python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000"]
+ENTRYPOINT ["./entrypoint.sh"]

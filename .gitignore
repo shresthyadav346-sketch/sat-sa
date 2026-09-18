@@ -70,3 +70,8 @@ coverage.xml
 *.sw?
 .DS_Store
 Thumbs.db
+
+# Database temporary / journal files
+*.db-wal
+*.db-shm
+*.db-journal

@@ -1,0 +1,24 @@
+# Docker Build Ignore File
+# Excludes unnecessary host files and incompatible architecture binaries
+
+.git
+.gitignore
+.pytest_cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+node_modules
+frontend/node_modules
+frontend/dist
+*.log
+.vscode
+.idea
+*.swp
+*.db-wal
+*.db-shm
+tests
+docs
+sample_data

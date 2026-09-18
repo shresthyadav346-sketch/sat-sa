@@ -3,10 +3,27 @@ SAT-SA: Supervisory Analytics Tool for SOC Assessment
 Configuration and Thresholds
 """
 
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
 from typing import Dict
 import os
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+# In Vercel serverless environment, filesystem is read-only, so clone database to /tmp
+if os.environ.get("VERCEL"):
+    tmp_db = "/tmp/sat_sa.db"
+    seed_db = os.path.join(BASE_DIR, "sat_sa.db")
+    if not os.path.exists(tmp_db) and os.path.exists(seed_db):
+        import shutil
+        try:
+            shutil.copy2(seed_db, tmp_db)
+        except Exception:
+            pass
+    DEFAULT_DB_URL = f"sqlite:///{tmp_db}"
+else:
+    DEFAULT_DB_PATH = os.path.join(BASE_DIR, "sat_sa.db").replace("\\", "/")
+    DEFAULT_DB_URL = f"sqlite:///{DEFAULT_DB_PATH}"
 
 class Settings(BaseSettings):
     APP_NAME: str = "SAT-SA: Supervisory Analytics Tool for SOC Assessment"
@@ -16,7 +33,7 @@ class Settings(BaseSettings):
     
     # Database configuration (SQLite by default for 100% offline zero-config operation)
     DATABASE_URL: str = Field(
-        default="sqlite:///./sat_sa.db",
+        default=DEFAULT_DB_URL,
         description="SQLAlchemy database connection string. Can be swapped to PostgreSQL."
     )
     
@@ -45,8 +62,6 @@ class Settings(BaseSettings):
     # Priority Review Queue
     TOP_REVIEW_QUEUE_LIMIT: int = 100
     
-    class Config:
-        env_file = ".env"
-        extra = "allow"
+    model_config = SettingsConfigDict(env_file=".env", extra="allow")
 
 settings = Settings()
