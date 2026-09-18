@@ -1,0 +1,10 @@
+{
+  "name": "sat-sa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SAT-SA: Supervisory Analytics Tool for SOC Assessment",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "cd frontend && npm run dev"
+  }
+}
